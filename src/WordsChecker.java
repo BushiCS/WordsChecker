@@ -9,14 +9,12 @@ public class WordsChecker {
         set.addAll(List.of(text.split("\\P{IsAlphabetic}+")));
     }
 
-    public boolean hasWord (String word) {
+    public boolean hasWord(String word) {
         if (set.contains(word)) {
             System.out.println("Содержит слово: " + word);
             return true;
-        } else {
-            System.out.println("Не содержит слова: " + word);
-            return false;
         }
-
+        System.out.println("Не содержит слова: " + word);
+        return false;
     }
 }
